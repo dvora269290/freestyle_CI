@@ -132,7 +132,7 @@ usersCtrl.logout = (req, res) => {
   res.redirect("/users/signin");
 };
 usersCtrl.findAllUser = (req, res) => {
-  User.find()
+  User.find().lean()
     .then(users => {
       res.render("notes/edit-note.hbs", { users });
     }).catch(err => {
