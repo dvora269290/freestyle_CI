@@ -22,10 +22,9 @@ services:
       - mongodb_data:/data/db
     networks:
       - app-network
-
 networks:
   app-network:
-    driver: bridge
+    driver:  bridge
 volumes:
   mongodb_data:
 
